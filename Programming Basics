@@ -1,0 +1,19 @@
+namespace _01.SortEvenNumbers
+{
+    using System;
+    using System.Linq;
+
+    public class SortEvenNum
+    {
+        public static void Main()
+        {
+            var input = Console.ReadLine()
+                               .Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)
+                               .Select(int.Parse)
+                               .Where(x => x % 2 == 0)
+                               .OrderBy(x => x)
+                               .ToArray();
+            Console.WriteLine(string.Join(", ", input));
+        }
+    }
+}
