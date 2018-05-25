@@ -1,0 +1,26 @@
+namespace StackAndQueuesLab
+{
+    using System;
+    using System.Collections.Generic;
+
+    public class StartUp
+    {
+        public static void Main()
+        {
+            Stack<char> stack = new Stack<char>();
+
+            var input = Console.ReadLine();
+                               
+            foreach (var letter in input)
+            {
+                stack.Push(letter);
+            }
+
+           while (stack.Count > 0)
+            {
+                Console.Write(stack.Pop());
+            }
+            Console.WriteLine();
+        }
+    }
+}
